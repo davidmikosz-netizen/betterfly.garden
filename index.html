@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="google-site-verification" content="82t9I02n_GnPnbuzuS34Yr6QMG5H4lMnlFv60UQNiXY" />
+  
+  <!-- Open Graph / Facebook / iMessage Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://betterfly.garden/">
+  <meta property="og:title" content="Better Fly Maryland — Native Garden Planner">
+  <meta property="og:description" content="Design your Maryland native pollinator garden with continuous bloom succession, deer-defense strategies, and local nursery guides tailored for the Chesapeake watershed.">
+  <meta property="og:image" content="https://betterfly.garden/og-preview.png">
+
+  <!-- Twitter / X Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://betterfly.garden/">
+  <meta name="twitter:title" content="Better Fly Maryland — Native Garden Planner">
+  <meta name="twitter:description" content="Design your Maryland native pollinator garden with continuous bloom succession, deer-defense strategies, and local nursery guides tailored for the Chesapeake watershed.">
+  <meta name="twitter:image" content="https://betterfly.garden/og-preview.png">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Better Fly Maryland - Native Garden Planner</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- PWA & Mobile Phone App Capabilities -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Better Fly MD">
+  <meta name="theme-color" content="#0284c7">
+  <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22Better%20Fly%20Maryland%22%2C%22short_name%22%3A%22BetterFly%22%2C%22start_url%22%3A%22.%2F%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23f0f9ff%22%2C%22theme_color%22%3A%22%230284c7%22%7D">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #e0f2fe;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #38bdf8;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0284c7;
+    }
+
+    /* Print Stylesheet for Nursery Shopping List */
+    @media print {
+      body {
+        background: white !important;
+        color: black !important;
+      }
+      header, nav, main, #plan-drawer-overlay, #open-plan-btn, .no-print {
+        display: none !important;
+      }
+      #plan-drawer {
+        position: static !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+      }
+      #print-summary-header {
+        display: block !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-sky-100 via-sky-50 to-blue-100 min-h-screen text-slate-800 antialiased pb-16">
+
+  <!-- HEADER CONTAINER -->
+  <header class="max-w-7xl mx-auto px-4 pt-6 pb-4">
+    <div class="bg-white/95 border border-sky-200 rounded-3xl p-6 md:p-8 shadow-md">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <!-- MD Flag Butterfly SVG Graphic & Title -->
+        <div class="flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
+          <div class="relative shrink-0">
+            <svg class="w-28 h-28 transform hover:scale-105 transition-transform duration-300 drop-shadow-md" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="crossland" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <rect width="40" height="40" fill="#dc2626"/>
+                  <rect width="20" height="20" fill="#ffffff"/>
+                  <rect x="20" y="20" width="20" height="20" fill="#ffffff"/>
+                  <path d="M10,0 L10,20 M0,10 L20,10" stroke="#dc2626" stroke-width="4"/>
+                  <path d="M30,20 L30,40 M20,30 L40,30" stroke="#dc2626" stroke-width="4"/>
+                </pattern>
+                <pattern id="calvert" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <rect width="40" height="40" fill="#fbbf24"/>
+                  <rect width="20" height="13.3" fill="#1e293b"/>
+                  <rect x="20" y="13.3" width="20" height="13.3" fill="#1e293b"/>
+                  <rect x="0" y="26.6" width="20" height="13.3" fill="#1e293b"/>
+                </pattern>
+              </defs>
+
+              <path d="M95 90 C50 30, 10 40, 15 85 C20 120, 70 125, 95 105 Z" fill="url(#calvert)" stroke="#1e293b" stroke-width="3"/>
+              <path d="M105 90 C150 30, 190 40, 185 85 C180 120, 130 125, 105 105 Z" fill="url(#crossland)" stroke="#1e293b" stroke-width="3"/>
+              <path d="M95 105 C50 115, 20 150, 45 180 C70 195, 90 150, 98 120 Z" fill="url(#crossland)" stroke="#1e293b" stroke-width="3"/>
+              <path d="M105 105 C150 115, 180 150, 155 180 C130 195, 110 150, 102 120 Z" fill="url(#calvert)" stroke="#1e293b" stroke-width="3"/>
+
+              <path d="M92 60 Q75 35 65 25" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <path d="M108 60 Q125 35 135 25" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <polygon points="65,20 68,26 74,26 69,30 71,36 65,32 59,36 61,30 56,26 62,26" fill="#f59e0b"/>
+              <polygon points="135,20 138,26 144,26 139,30 141,36 135,32 129,36 131,30 126,26 132,26" fill="#f59e0b"/>
+
+              <ellipse cx="100" cy="100" rx="12" ry="42" fill="#334155" stroke="#1e293b" stroke-width="3"/>
+              <circle cx="100" cy="62" r="16" fill="#334155" stroke="#1e293b" stroke-width="3"/>
+
+              <rect x="80" y="54" width="18" height="12" rx="3" fill="#0f172a"/>
+              <rect x="102" y="54" width="18" height="12" rx="3" fill="#0f172a"/>
+              <line x1="98" y1="58" x2="102" y2="58" stroke="#0f172a" stroke-width="3"/>
+              <line x1="83" y1="57" x2="88" y2="63" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+              <line x1="105" y1="57" x2="110" y2="63" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+
+              <path d="M92 70 Q100 77 108 70" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+
+          <div>
+            <div class="flex items-center justify-center sm:justify-start gap-2">
+              <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Better Fly Maryland</h1>
+              <span class="bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded-full border border-amber-300">MD Native Edition</span>
+            </div>
+            <p class="text-sky-800 font-bold text-lg mt-1">Maryland Native Garden Planner</p>
+            <p class="text-slate-600 font-medium text-sm">Chesapeake Watershed Ecosystem &amp; Continuous Bloom Succession Designer</p>
+          </div>
+        </div>
+
+        <!-- Visitor Counter & My Yard Plan Button -->
+        <div class="flex flex-wrap items-center justify-center gap-3 w-full md:w-auto">
+          <div class="bg-sky-50 border border-sky-200 px-3 py-2 rounded-2xl flex items-center gap-2 text-xs font-semibold text-sky-900">
+            <span class="text-base">👁️</span>
+            <div>
+              <div class="text-[10px] uppercase tracking-wider text-sky-600 font-bold">Visits</div>
+              <span id="visitor-counter-val">1,248</span>
+            </div>
+          </div>
+
+          <button id="open-plan-btn" onclick="toggleYardPlanDrawer()" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold text-sm px-5 py-3 rounded-2xl shadow-sm hover:shadow transition-all flex items-center gap-2">
+            <span>📋</span>
+            <span>My Yard Plan</span>
+            <span id="plan-badge-count" class="bg-white text-amber-900 font-black text-xs px-2 py-0.5 rounded-full">0</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN NAVIGATION TABS (Reordered: MD Native Nurseries moved to end) -->
+  <nav class="max-w-7xl mx-auto px-4 mb-6">
+    <div class="flex overflow-x-auto gap-2 bg-white/80 p-2 rounded-2xl border border-sky-200 shadow-sm scrollbar-none">
+      <button onclick="switchTab('why-natives')" id="nav-why-natives" class="nav-tab px-4 py-2.5 rounded-xl font-bold text-sm whitespace-nowrap transition-all bg-sky-600 text-white shadow-sm flex items-center gap-2">
+        <span>🌊</span> Why Native Plants?
+      </button>
+      <button onclick="switchTab('getting-started')" id="nav-getting-started" class="nav-tab px-4 py-2.5 rounded-xl font-semibold text-sm text-slate-600 hover:bg-sky-100 whitespace-nowrap transition-all flex items-center gap-2">
+        <span>🚀</span> Quick Start
+      </button>
+      <button onclick="switchTab('explorer')" id="nav-explorer" class="nav-tab px-4 py-2.5 rounded-xl font-semibold text-sm text-slate-600 hover:bg-sky-100 whitespace-nowrap transition-all flex items-center gap-2">
+        <span>🌿</span> Pathways Explorer &amp; Bloom Calendar
+      </button>
+      <button onclick="switchTab('defense')" id="nav-defense" class="nav-tab px-4 py-2.5 rounded-xl font-semibold text-sm text-slate-600 hover:bg-sky-100 whitespace-nowrap transition-all flex items-center gap-2">
+        <span>🦌</span> Deer &amp; Bunny Defense
+      </button>
+      <button onclick="switchTab('water-station')" id="nav-water-station" class="nav-tab px-4 py-2.5 rounded-xl font-semibold text-sm text-slate-600 hover:bg-sky-100 whitespace-nowrap transition-all flex items-center gap-2">
+        <span>💧</span> Water Station
+      </button>
+      <button onclick="switchTab('about')" id="nav-about" class="nav-tab px-4 py-2.5 rounded-xl font-semibold text-sm text-slate-600 hover:bg-sky-100 whitespace-nowrap transition-all flex items-center gap-2">
+        <span>ℹ️</span> About &amp; Support
+      </button>
+      <button onclick="switchTab('nurseries')" id="nav-nurseries" class="nav-tab px-4 py-2.5 rounded-xl font-semibold text-sm text-slate-600 hover:bg-sky-100 whitespace-nowrap transition-all flex items-center gap-2">
+        <span>🏡</span> MD Native Nurseries
+      </button>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4">
+
+    <!-- TAB 1: WHY NATIVE PLANTS? -->
+    <section id="tab-why-natives" class="tab-content space-y-6">
+      <div class="bg-white border border-sky-200 p-6 md:p-8 rounded-3xl space-y-6 shadow-sm">
+        
+        <div class="border-b border-sky-100 pb-4">
+          <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+            <span>🌊</span> Why Choose Maryland Native Plants?
+          </h2>
+          <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+            Maryland's native flora evolved over thousands of years alongside our local soils, intense summer humidity, and unique Chesapeake weather patterns. Converting even a small strip of lawn into a native garden bed reduces your weekend mowing time and creates a self-sustaining sanctuary that brings vibrant, fascinating wildlife right to your window.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-sky-50 border border-sky-200 p-5 rounded-2xl space-y-2">
+            <div class="text-2xl">🌱</div>
+            <h3 class="font-bold text-slate-900 text-base">Less Lawn to Mow &amp; Water</h3>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Turf grass requires constant mowing, gas, and supplemental watering during hot August dry spells. Native perennials like <strong>Little Bluestem grass</strong> and <strong>Joe Pye Weed</strong> push roots 5–15 feet down into heavy Maryland clay, absorbing stormwater runoff and thriving on natural rainfall once established—while shallow native spreaders like <strong>Mountain Mint</strong> create dense surface mats that smother weeds without risking underground pipes.
+            </p>
+          </div>
+
+          <div class="bg-emerald-50 border border-emerald-200 p-5 rounded-2xl space-y-2">
+            <div class="text-2xl">🐦</div>
+            <h3 class="font-bold text-slate-900 text-base">Cool Birds &amp; Pollinators Arrive</h3>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              When you plant native nectar sources, nature responds immediately. Planting red tubular species like Cardinal Flower and Coral Honeysuckle attracts Ruby-throated Hummingbirds that return to feed at least twice a day throughout the summer season!
+            </p>
+          </div>
+
+          <div class="bg-purple-50 border border-purple-200 p-5 rounded-2xl space-y-2">
+            <div class="text-2xl">🦋</div>
+            <h3 class="font-bold text-slate-900 text-base">Essential Host Plants</h3>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              90% of plant-eating insects are host specialists that can only reproduce on native species. Monarch caterpillars require Milkweed, Spicebush Swallowtails need Spicebush, and the Baltimore Checkerspot relies on White Turtlehead.
+            </p>
+          </div>
+        </div>
+
+        <!-- Septic Line & Drain Field Safety Callout Box -->
+        <div class="bg-sky-50 border border-sky-200 p-5 rounded-2xl flex items-start gap-3">
+          <span class="text-2xl shrink-0">🛡️</span>
+          <div class="text-xs text-slate-700 leading-relaxed">
+            <h4 class="font-bold text-slate-900 text-sm mb-1">Septic Line &amp; Drain Field Safe</h4>
+            <p>
+              Worried about buried utilities or septic lines? Non-woody native perennials and grasses (like <strong>Little Bluestem</strong>, <strong>Joe Pye Weed</strong>, <strong>Black-Eyed Susan</strong>, and <strong>Mountain Mint</strong>) are completely safe to plant near or over drain fields! Unlike trees and invasive woody shrubs, herbaceous roots are soft and fibrous—they absorb excess water and prevent soil erosion without ever cracking or clogging underground pipes.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 p-5 rounded-2xl flex items-start gap-3">
+          <span class="text-2xl shrink-0">💡</span>
+          <p class="text-xs text-amber-950 font-medium leading-relaxed">
+            <strong>Chesapeake Bay Impact:</strong> Traditional lawns require synthetic nitrogen fertilizers that wash into local storm drains during heavy summer thunderstorms, creating toxic algae blooms in the Bay. Native plants thrive naturally without synthetic chemical inputs!
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 2: QUICK START -->
+    <section id="tab-getting-started" class="tab-content hidden space-y-6">
+      <div class="bg-white border border-sky-200 p-6 md:p-8 rounded-3xl space-y-6 shadow-sm">
+        
+        <div class="border-b border-sky-100 pb-4">
+          <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+            <span>🚀</span> Quick Start: Your Easy Lawn Conversion Guide
+          </h2>
+          <p class="text-slate-600 text-sm mt-1">
+            You don't need to dig up your whole yard overnight! Converting a small 4x4 pocket garden or a strip along your driveway creates an immediate pollinator sanctuary with minimal effort. Late summer through early fall is the ideal time to sheet mulch so cardboard and mulch smother grass and build soil over winter.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-sky-50 border border-sky-200 p-5 rounded-2xl space-y-2">
+            <div class="w-8 h-8 rounded-full bg-sky-600 text-white font-bold flex items-center justify-center text-sm">1</div>
+            <h3 class="font-bold text-slate-900 text-base">Mow &amp; Cardboard Layer</h3>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Mow your selected turf grass as short as possible. Cover the grass completely with plain brown cardboard (remove tape and staples). Overlap edges by 6 inches so grass can't sneak through!
+            </p>
+          </div>
+
+          <div class="bg-amber-50 border border-amber-200 p-5 rounded-2xl space-y-2">
+            <div class="w-8 h-8 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm">2</div>
+            <h3 class="font-bold text-slate-900 text-base">Mulch &amp; Compost</h3>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Cover cardboard with 3–4 inches of hardwood mulch or leaf compost. Water thoroughly. The cardboard smothers weeds while breaking down into rich soil earthworms love.
+            </p>
+          </div>
+
+          <div class="bg-emerald-50 border border-emerald-200 p-5 rounded-2xl space-y-2">
+            <div class="w-8 h-8 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm">3</div>
+            <h3 class="font-bold text-slate-900 text-base">Plant Native Starters</h3>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Cut small holes through the cardboard layer to plant your native perennials. Water weekly during their first summer until their deep roots establish!
+            </p>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-sky-100">
+          <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+            <span>⭐</span> Recommended "Bulletproof" Maryland Starter Plants
+          </h3>
+          <p class="text-slate-600 text-xs mb-4">
+            If you are brand new to native gardening, start with these three tough, forgiving species:
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white border border-slate-200 rounded-2xl p-4 flex flex-col justify-between hover:border-sky-300 transition-all shadow-xs">
+              <div>
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded-md">Sun / Partial Shade</span>
+                  <span class="text-[11px] text-slate-500 font-medium">Summer Bloom</span>
+                </div>
+                <h4 class="font-bold text-slate-900 text-base mt-2">Clustered Mountain Mint</h4>
+                <p class="text-xs italic text-slate-500">Pycnanthemum muticum</p>
+                <p class="text-xs text-slate-600 mt-2">
+                  Indestructible pollinator powerhouse! Ranked #1 in native plant trials for insect attraction. Minty aroma makes it 100% deer and rabbit proof.
+                </p>
+              </div>
+              <button onclick="addToPlan('Clustered Mountain Mint')" class="mt-4 bg-sky-100 hover:bg-sky-200 text-sky-800 text-xs font-bold py-2 px-3 rounded-xl transition-colors flex items-center justify-center gap-1">
+                <span>➕</span> Add to Yard Plan
+              </button>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-4 flex flex-col justify-between hover:border-sky-300 transition-all shadow-xs">
+              <div>
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold text-rose-700 bg-rose-100 px-2 py-0.5 rounded-md">Partial / Full Shade</span>
+                  <span class="text-[11px] text-slate-500 font-medium">Spring / Summer</span>
+                </div>
+                <h4 class="font-bold text-slate-900 text-base mt-2">Woodland Pinkroot</h4>
+                <p class="text-xs italic text-slate-500">Spigelia marilandica</p>
+                <p class="text-xs text-slate-600 mt-2">
+                  A shade garden jewel! Vibrant tubular red flowers with yellow star centers that attract Ruby-throated Hummingbirds like a magnet.
+                </p>
+              </div>
+              <button onclick="addToPlan('Woodland Pinkroot')" class="mt-4 bg-sky-100 hover:bg-sky-200 text-sky-800 text-xs font-bold py-2 px-3 rounded-xl transition-colors flex items-center justify-center gap-1">
+                <span>➕</span> Add to Yard Plan
+              </button>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-4 flex flex-col justify-between hover:border-sky-300 transition-all shadow-xs">
+              <div>
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-md">Any Light / Groundcover</span>
+                  <span class="text-[11px] text-slate-500 font-medium">Spring Bloom</span>
+                </div>
+                <h4 class="font-bold text-slate-900 text-base mt-2">Golden Ragwort</h4>
+                <p class="text-xs italic text-slate-500">Packera aurea</p>
+                <p class="text-xs text-slate-600 mt-2">
+                  The ultimate living green mulch! Evergreen foliage forms a dense weed-suppressing carpet with bright yellow early spring blooms.
+                </p>
+              </div>
+              <button onclick="addToPlan('Golden Ragwort')" class="mt-4 bg-sky-100 hover:bg-sky-200 text-sky-800 text-xs font-bold py-2 px-3 rounded-xl transition-colors flex items-center justify-center gap-1">
+                <span>➕</span> Add to Yard Plan
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 3: PATHWAYS EXPLORER & BLOOM CALENDAR -->
+    <section id="tab-explorer" class="tab-content hidden space-y-6">
+      
+      <!-- New Introductory Banner (Change 4) -->
+      <div class="bg-gradient-to-r from-sky-50 via-emerald-50 to-blue-50 border border-sky-200 p-6 rounded-3xl shadow-sm space-y-2">
+        <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 flex items-center gap-2">
+          <span>🌿</span> Pathways Explorer &amp; Bloom Succession
+        </h2>
+        <p class="text-slate-700 text-xs sm:text-sm font-medium leading-relaxed max-w-4xl">
+          The selections below allow you to optimize your garden for pollinators, hummingbirds, butterflies, or all of the above. Use the bloom succession matrix to ensure continuous flowering from early spring through late fall, providing uninterrupted nectar and pollen corridors across the entire growing season.
+        </p>
+      </div>
+
+      <div class="bg-white border border-sky-200 p-5 rounded-3xl shadow-sm space-y-3">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+            <span>🗓️</span> Maryland Bloom Succession Matrix
+          </h3>
+          <span class="text-xs font-semibold text-sky-700">Filter species by blooming window:</span>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-center text-xs font-bold">
+          <button onclick="setSeasonFilter('All')" id="season-btn-All" class="season-btn py-2 px-3 rounded-xl border border-slate-300 bg-slate-800 text-white transition-all shadow-xs">
+            All Seasons
+          </button>
+          <button onclick="setSeasonFilter('Spring')" id="season-btn-Spring" class="season-btn py-2 px-3 rounded-xl border border-emerald-200 bg-emerald-50 text-emerald-800 hover:bg-emerald-100 transition-all">
+            🌸 Spring (Apr–May)
+          </button>
+          <button onclick="setSeasonFilter('Summer')" id="season-btn-Summer" class="season-btn py-2 px-3 rounded-xl border border-amber-200 bg-amber-50 text-amber-800 hover:bg-amber-100 transition-all">
+            ☀️ Summer (Jun–Jul)
+          </button>
+          <button onclick="setSeasonFilter('Late Summer')" id="season-btn-Late Summer" class="season-btn py-2 px-3 rounded-xl border border-orange-200 bg-orange-50 text-orange-800 hover:bg-orange-100 transition-all">
+            🌾 Late Summer (Aug)
+          </button>
+          <button onclick="setSeasonFilter('Fall')" id="season-btn-Fall" class="season-btn py-2 px-3 rounded-xl border border-purple-200 bg-purple-50 text-purple-800 hover:bg-purple-100 transition-all">
+            🍁 Fall (Sep–Oct)
+          </button>
+        </div>
+      </div>
+
+      <div class="bg-white border border-sky-200 p-5 rounded-3xl shadow-sm space-y-4">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div class="relative flex-1">
+            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400">🔍</span>
+            <input type="text" id="search-input" oninput="renderPlants()" placeholder="Search by name (e.g. Milkweed, Lobelia, Asclepias, Joe Pye)..." class="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 focus:bg-white transition-all">
+          </div>
+          
+          <div class="flex items-center gap-2 text-xs font-semibold text-slate-500">
+            <span>Showing:</span>
+            <span id="filtered-count-badge" class="bg-sky-100 text-sky-800 font-bold px-2.5 py-1 rounded-full">30 Species</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div>
+            <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Pathway Goal</label>
+            <select id="filter-pathway" onchange="renderPlants()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500">
+              <option value="All">All Pathways</option>
+              <option value="Pollinators">Pollinator Powerhouse</option>
+              <option value="Hummingbirds">Hummingbird Haven</option>
+              <option value="Butterflies">Butterfly Sanctuary</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Sun Needs</label>
+            <select id="filter-sun" onchange="renderPlants()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500">
+              <option value="All">All Sun Levels</option>
+              <option value="Full Sun">Full Sun</option>
+              <option value="Partial Shade">Partial Shade</option>
+              <option value="Full Shade">Full Shade</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Moisture</label>
+            <select id="filter-moisture" onchange="renderPlants()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500">
+              <option value="All">All Moisture Levels</option>
+              <option value="Dry">Dry</option>
+              <option value="Average">Average</option>
+              <option value="Wet">Wet</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Layer / Type</label>
+            <select id="filter-layer" onchange="renderPlants()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500">
+              <option value="All">All Layers</option>
+              <option value="Anchor">Anchor</option>
+              <option value="Filler">Filler</option>
+              <option value="Groundcover">Groundcover</option>
+              <option value="Grass">Grass</option>
+              <option value="Shrub">Shrub</option>
+              <option value="Vine">Vine</option>
+              <option value="Shrubs & Vines">Shrubs &amp; Vines</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div id="plant-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      </div>
+    </section>
+
+    <!-- TAB 4: DEER & BUNNY DEFENSE -->
+    <section id="tab-defense" class="tab-content hidden space-y-6">
+      <div class="bg-white border border-sky-200 p-6 md:p-8 rounded-3xl space-y-6 shadow-sm">
+        
+        <div class="border-b border-sky-100 pb-4">
+          <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+            <span>🦌</span> Deer &amp; Bunny Defense Guide
+          </h2>
+          <p class="text-slate-600 text-sm mt-1">
+            Protecting your native garden does not require turning your yard into a fortress! Understanding animal habits helps keep your plants safe.
+          </p>
+        </div>
+
+        <div class="bg-amber-50 border border-amber-200 p-5 rounded-2xl space-y-3">
+          <h3 class="font-bold text-amber-950 text-base flex items-center gap-2">
+            <span>💡</span> Early Season Repellent Strategy &amp; Reality Check
+          </h3>
+          <p class="text-slate-700 text-xs leading-relaxed">
+            <strong>Break Habits Early:</strong> White-tailed deer and cottontail rabbits establish their spring feeding routes in early April as new shoots first emerge. Spraying organic smell/taste repellents early in the season breaks their habit before your garden becomes part of their daily routine!
+          </p>
+          <p class="text-slate-700 text-xs leading-relaxed">
+            <strong>You Don't Need Everything:</strong> You don't have to build 8-foot fences or cover every plant! Aromatic screen plants (like Mountain Mint or Bergamot) naturally make garden beds unappealing to browse. Liquid smell repellents (putrescent egg/garlic) may smell strong for a couple of hours right after spraying, but once dry, they are completely unnoticeable to human noses while remaining highly effective against deer and rabbits for weeks.
+          </p>
+        </div>
+
+        <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-2xl text-xs space-y-1">
+          <h4 class="font-bold text-emerald-950 flex items-center gap-1.5">
+            <span>🌿</span> Optional Companion Annuals for Border Screening:
+          </h4>
+          <p class="text-slate-700 leading-relaxed">
+            While not native perennials, non-invasive garden herbs like <strong>Sweet Basil</strong>, <strong>Rosemary</strong>, and <strong>French Marigolds</strong> possess strong essential oils that deer and bunnies dislike. Planting them around tender young perennials adds an extra aromatic boundary.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-slate-700 border-collapse">
+            <thead>
+              <tr class="bg-sky-100 text-sky-900 font-bold border-b border-sky-200">
+                <th class="p-3.5 rounded-tl-xl">Feature</th>
+                <th class="p-3.5">🦌 White-Tailed Deer</th>
+                <th class="p-3.5 rounded-tr-xl">🐇 Eastern Cottontail Rabbit</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-sky-100">
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900 bg-slate-50">Damage Sign</td>
+                <td class="p-3.5">Ragged, torn leaves &amp; shredded stems (deer lack upper incisors). Damage up to 6 feet high.</td>
+                <td class="p-3.5">Clean, sharp 45-degree angle cuts on tender stems under 2 feet tall. Chewed woody bark in winter.</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900 bg-slate-50">Physical Barriers</td>
+                <td class="p-3.5">Requires 8-foot tall fencing or 3D double fencing to disrupt leap perception.</td>
+                <td class="p-3.5">Requires 1/2-inch hardware cloth mesh. Must be buried 2–3 inches deep so they cannot dig underneath!</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900 bg-slate-50">Repellent Type</td>
+                <td class="p-3.5">Smell-based repellents (putrescent egg solids, garlic, blood meal). Rotate brands monthly.</td>
+                <td class="p-3.5">Taste-based repellents (capsaicin/hot pepper spray). Reapply after heavy rainstorms!</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900 bg-slate-50">Aromatic Screen Plants</td>
+                <td class="p-3.5">Mountain Mints, Aromatic Aster, Wild Bergamot, Spicebush, Fragrant Sumac.</td>
+                <td class="p-3.5">Mountain Mints, Giant Hyssop, Wild Bergamot, Golden Ragwort, Blue Mistflower.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 5: WATER STATION -->
+    <section id="tab-water-station" class="tab-content hidden space-y-6">
+      <div class="bg-white border border-sky-200 p-6 md:p-8 rounded-3xl space-y-6 shadow-sm">
+        
+        <div class="border-b border-sky-100 pb-4">
+          <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+            <span>💧</span> Hydrating the Sanctuary: Insect &amp; Bird Water Stations
+          </h2>
+          <p class="text-slate-600 text-sm mt-1">
+            Maryland summers get hot and humid! Providing clean, safe water is just as important as supplying nectar for pollinators.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-sky-50 border border-sky-200 p-5 rounded-2xl space-y-3">
+            <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+              <span>🐝</span> The Bee &amp; Butterfly Puddle Station
+            </h3>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Insects cannot swim in deep bird baths and will drown easily. Fill a shallow terracotta saucer with river pebbles, stones, or glass marbles. Add water so the stones remain half-exposed, giving bees and butterflies a stable landing pad to sip safely.
+            </p>
+          </div>
+
+          <div class="bg-blue-50 border border-blue-200 p-5 rounded-2xl space-y-3">
+            <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+              <span>☀️</span> Solar Moving Water &amp; Mosquito Prevention
+            </h3>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Standing water breeds mosquitoes within 48 hours! Place a low-cost solar bubbler or fountain in your water dish. The moving water ripples keep mosquitoes from laying eggs while producing splashing sounds that lead migrating songbirds directly to your garden.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 6: ABOUT & SUPPORT -->
+    <section id="tab-about" class="tab-content hidden space-y-6">
+      <div class="bg-white border border-sky-200 p-6 md:p-8 rounded-3xl space-y-6 shadow-sm">
+        
+        <div class="border-b border-sky-100 pb-4">
+          <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+            <span>ℹ️</span> About Better Fly Maryland
+          </h2>
+          <p class="text-slate-600 text-sm mt-1">
+            This app was developed by David Mikosz as he moves to make his lawn more friendly to native pollinators, butterflies and hummingbirds.
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-r from-sky-50 to-blue-50 border border-sky-200 p-5 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xs">
+          <div class="flex items-center gap-3 text-center sm:text-left">
+            <span class="text-3xl">📱</span>
+            <div>
+              <h3 class="font-bold text-slate-900 text-sm">Save as a Phone App</h3>
+              <p class="text-slate-600 text-xs">Add Better Fly MD directly to your iPhone or Android home screen without an app store!</p>
+            </div>
+          </div>
+          <div class="text-xs text-slate-700 font-semibold bg-white border border-sky-200 px-4 py-2.5 rounded-xl shrink-0 text-center sm:text-left shadow-xs">
+            <span><strong>iPhone (Safari):</strong> Tap Share ➔ 'Add to Home Screen'<br><strong>Android (Chrome):</strong> Tap Menu (⋮) ➔ 'Install App'</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 p-6 rounded-2xl space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="text-3xl">☕</span>
+              <div>
+                <h3 class="font-bold text-slate-900 text-lg">Support Native Habitat Projects</h3>
+                <p class="text-slate-600 text-xs">If this tool helped you design your garden, consider sending a small tip to support future updates!</p>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a href="https://venmo.com/u/forgoodkarma" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#008CFF] hover:bg-[#0074d9] text-white font-bold text-sm px-6 py-3 rounded-2xl shadow-sm transition-all w-full">
+                <span>💙</span>
+                <span>Tip via Venmo (@forgoodkarma)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-sky-50 border border-sky-200 p-6 rounded-2xl space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="text-3xl">✉️</span>
+              <div>
+                <h3 class="font-bold text-slate-900 text-lg">Contact &amp; Feedback</h3>
+                <p class="text-slate-600 text-xs">Have a native species suggestion or feedback about the planner?</p>
+              </div>
+            </div>
+
+            <div class="pt-2 space-y-2">
+              <button onclick="revealEmail()" id="reveal-email-btn" class="bg-sky-600 hover:bg-sky-700 text-white font-bold text-sm px-6 py-3 rounded-2xl transition-all w-full flex items-center justify-center gap-2">
+                <span>📬</span> Show Contact Email
+              </button>
+
+              <div id="email-display-card" class="hidden bg-white border border-sky-200 p-3 rounded-xl flex items-center justify-between text-xs font-semibold text-slate-800">
+                <a id="email-mailto-link" href="#" class="text-sky-700 hover:underline font-bold"></a>
+                <button onclick="copyEmailToClipboard()" id="copy-email-btn" class="bg-sky-100 hover:bg-sky-200 text-sky-800 px-3 py-1.5 rounded-lg text-xs font-bold transition-colors">
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 7: MARYLAND NATIVE NURSERIES FINDER (Moved to end of bar) -->
+    <section id="tab-nurseries" class="tab-content hidden space-y-6">
+      <div class="bg-white border border-sky-200 p-6 md:p-8 rounded-3xl space-y-6 shadow-sm">
+        <div class="border-b border-sky-100 pb-4">
+          <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+            <span>🏡</span> Where to Buy Maryland Native Plants
+          </h2>
+          <p class="text-slate-600 text-sm mt-1">
+            Support local Maryland native plant nurseries, garden centers, and specialty growers to source healthy, chemical-free straight species:
+          </p>
+        </div>
+
+        <!-- Disclaimer Banner -->
+        <div class="bg-amber-50 border border-amber-200 p-4 rounded-2xl flex items-start gap-2.5 text-xs text-amber-950 font-medium">
+          <span class="text-lg shrink-0">⚠️</span>
+          <p>
+            <strong>Disclaimer:</strong> The nurseries and garden centers listed below are provided solely as helpful, illustrative suggestions for local sourcing and do not constitute official endorsements or formal commercial partnerships.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <!-- Featured Local Nursery: American Plant -->
+          <div class="bg-sky-50 border border-sky-300 p-4 rounded-2xl space-y-2 shadow-xs">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-slate-900 text-sm">American Plant</h3>
+              <span class="bg-sky-200 text-sky-900 font-bold px-2 py-0.5 rounded text-[10px]">Bethesda, MD</span>
+            </div>
+            <p class="text-slate-600">Established local garden center offering an extensive selection of native perennials, shrubs, organic soil amendments, and expert plant care advice.</p>
+          </div>
+
+          <div class="bg-sky-50 border border-sky-200 p-4 rounded-2xl space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-slate-900 text-sm">Firefly Farm &amp; Mercantile</h3>
+              <span class="bg-sky-200 text-sky-900 font-semibold px-2 py-0.5 rounded text-[10px]">Mail-Order &amp; Regional</span>
+            </div>
+            <p class="text-slate-600">Specialty supplier for native seeds and rare eco-type Mid-Atlantic perennials.</p>
+          </div>
+
+          <div class="bg-sky-50 border border-sky-200 p-4 rounded-2xl space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-slate-900 text-sm">Herring Run Nursery (Blue Water Baltimore)</h3>
+              <span class="bg-sky-200 text-sky-900 font-semibold px-2 py-0.5 rounded text-[10px]">Baltimore City / County</span>
+            </div>
+            <p class="text-slate-600">Non-profit native plant nursery located in Baltimore specializing in Chesapeake Bay watershed species.</p>
+          </div>
+
+          <div class="bg-sky-50 border border-sky-200 p-4 rounded-2xl space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-slate-900 text-sm">Earth Sangha Native Plant Nursery</h3>
+              <span class="bg-sky-200 text-sky-900 font-semibold px-2 py-0.5 rounded text-[10px]">Regional Washington Metro</span>
+            </div>
+            <p class="text-slate-600">Volunteer-powered non-profit propagating strictly local wild-collected Mid-Atlantic native ecotypes.</p>
+          </div>
+
+          <div class="bg-sky-50 border border-sky-200 p-4 rounded-2xl space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-slate-900 text-sm">Chesapeake Natives Inc.</h3>
+              <span class="bg-sky-200 text-sky-900 font-semibold px-2 py-0.5 rounded text-[10px]">Prince George's County</span>
+            </div>
+            <p class="text-slate-600">Dedicated non-profit nursery in Upper Marlboro propagating local native plants for the Coastal Plain and Piedmont.</p>
+          </div>
+
+          <div class="bg-sky-50 border border-sky-200 p-4 rounded-2xl space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-slate-900 text-sm">Lauren's Garden Service &amp; Native Nursery</h3>
+              <span class="bg-sky-200 text-sky-900 font-semibold px-2 py-0.5 rounded text-[10px]">Howard County</span>
+            </div>
+            <p class="text-slate-600">Retail native plant nursery in Glenwood offering native perennials, shrubs, and ecological landscape design.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MY YARD PLAN SIDE DRAWER OVERLAY -->
+  <div id="plan-drawer-overlay" class="fixed inset-0 bg-slate-900/40 backdrop-blur-xs z-40 hidden" onclick="toggleYardPlanDrawer()"></div>
+
+  <div id="plan-drawer" class="fixed inset-y-0 right-0 w-full max-w-md bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col">
+    <div id="print-summary-header" class="hidden p-6 border-b border-slate-200">
+      <h1 class="text-xl font-bold text-slate-900">Better Fly Maryland — Native Garden Shopping List</h1>
+      <p class="text-xs text-slate-500">Chesapeake Watershed Habitat &amp; Native Species Plan • betterfly.garden</p>
+    </div>
+
+    <div class="p-6 border-b border-slate-100 flex items-start justify-between bg-sky-50 no-print">
+      <div class="flex items-start gap-3">
+        <span class="text-2xl mt-0.5">📋</span>
+        <div>
+          <h3 class="font-bold text-slate-900 text-lg leading-tight">My Yard Plan</h3>
+          <p class="text-sky-900 text-xs font-semibold mt-0.5">Custom Native Plant Shopping List</p>
+          <!-- Explanatory Text Added (Change 5) -->
+          <p class="text-slate-600 text-xs mt-1 leading-relaxed">
+            This allows you to develop, save, and print a custom shopping list of the native plants you chose for your garden.
+          </p>
+        </div>
+      </div>
+      <button onclick="toggleYardPlanDrawer()" class="text-slate-400 hover:text-slate-600 text-2xl font-bold p-1 shrink-0">✕</button>
+    </div>
+
+    <div class="flex-1 overflow-y-auto p-6 space-y-4" id="plan-drawer-content">
+    </div>
+
+    <div class="p-6 border-t border-slate-100 bg-slate-50 space-y-2 no-print">
+      <button onclick="window.print()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-2xl shadow-sm transition-all text-sm flex items-center justify-center gap-2">
+        <span>🖨️</span> Print / Save PDF Shopping List
+      </button>
+      <button onclick="copyYardPlanList()" id="copy-plan-btn" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-2.5 rounded-2xl shadow-sm transition-all text-xs flex items-center justify-center gap-2">
+        <span>📋</span> Copy List to Clipboard
+      </button>
+      <button onclick="clearYardPlan()" class="w-full bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-2 rounded-xl text-xs transition-all">
+        Clear All Selected Plants
+      </button>
+    </div>
+  </div>
+
+  <script>
+    /* MARYLAND NATIVE PLANT DATASET */
+    const NATIVE_PLANTS = [
+      {
+        id: "cardinal-flower",
+        name: "Cardinal Flower",
+        latin: "Lobelia cardinalis",
+        pathway: ["Hummingbirds"],
+        sun: ["Full Sun", "Partial Shade"],
+        moisture: ["Average", "Wet"],
+        layer: "Anchor",
+        bloom: "Summer",
+        color: "red",
+        desc: "Luminous red tubular blooms that returning Ruby-throated Hummingbirds lock onto like magnets."
+      },
+      {
+        id: "woodland-pinkroot",
+        name: "Woodland Pinkroot",
+        latin: "Spigelia marilandica",
+        pathway: ["Hummingbirds"],
+        sun: ["Partial Shade", "Full Shade"],
+        moisture: ["Average", "Wet"],
+        layer: "Anchor",
+        bloom: "Spring",
+        color: "red",
+        desc: "Stunning scarlet flowers opening to yellow star centers. Exceptional shade-loving hummingbird nectar source."
+      },
+      {
+        id: "butterfly-weed",
+        name: "Butterfly Weed",
+        latin: "Asclepias tuberosa",
+        pathway: ["Butterflies", "Pollinators"],
+        sun: ["Full Sun"],
+        moisture: ["Dry", "Average"],
+        layer: "Filler",
+        bloom: "Summer",
+        color: "orange",
+        hostFor: "Monarch Butterfly Caterpillars",
+        desc: "Vibrant electric-orange clusters. Essential host plant for Monarch caterpillars and nectar magnet for native bees."
+      },
+      {
+        id: "swamp-milkweed",
+        name: "Swamp Milkweed",
+        latin: "Asclepias incarnata",
+        pathway: ["Butterflies", "Pollinators"],
+        sun: ["Full Sun", "Partial Shade"],
+        moisture: ["Average", "Wet"],
+        layer: "Anchor",
+        bloom: "Summer",
+        color: "pink",
+        hostFor: "Monarch Butterfly Caterpillars",
+        desc: "Fragrant vanilla-scented rose-pink blooms. Ideal for moist soils and rain gardens."
+      },
+      {
+        id: "common-milkweed",
+        name: "Common Milkweed",
+        latin: "Asclepias syriaca",
+        pathway: ["Butterflies", "Pollinators"],
+        sun: ["Full Sun"],
+        moisture: ["Dry", "Average"],
+        layer: "Anchor",
+        bloom: "Summer",
+        color: "pink",
+        hostFor: "Monarch Butterfly Caterpillars",
+        desc: "Robust native monarch host with heavily scented pink globe flower clusters."
+      },
+      {
+        id: "clustered-mountain-mint",
+        name: "Clustered Mountain Mint",
+        latin: "Pycnanthemum muticum",
+        pathway: ["Pollinators", "Butterflies"],
+        sun: ["Full Sun", "Partial Shade"],
+        moisture: ["Dry", "Average", "Wet"],
+        layer: "Filler",
+        bloom: "Summer",
+        color: "silver",
+        desc: "Ranked #1 in native pollinator attraction trials! Silver-green bracts with minty aroma that deters deer."
+      },
+      {
+        id: "narrowleaf-mountain-mint",
+        name: "Narrowleaf Mountain Mint",
+        latin: "Pycnanthemum tenuifolium",
+        pathway: ["Pollinators"],
+        sun: ["Full Sun", "Partial Shade"],
+        moisture: ["Dry", "Average"],
+        layer: "Filler",
+        bloom: "Summer",
+        color: "white",
+        desc: "Fine feathery foliage with profuse white summer blooms. Exceptionally drought tolerant."
+      },
+      {
+        id: "golden-ragwort",
+        name: "Golden Ragwort",
+        latin: "Packera aurea",
+        pathway: ["Pollinators"],
+        sun: ["Full Sun", "Partial Shade", "Full Shade"],
+        moisture: ["Average", "Wet"],
+        layer: "Groundcover",
+        bloom: "Spring",
+        color: "yellow",
+        desc: "Evergreen living groundcover that smothers weeds while offering bright yellow early spring nectar."
+      },
+      {
+        id: "yellow-giant-hyssop",
+        name: "Yellow Giant Hyssop",
+        latin: "Agastache nepetoides",
+        pathway: ["Pollinators"],
+        sun: ["Full Sun", "Partial Shade"],
+        moisture: ["Average"],
+        layer: "Anchor",
+        bloom: "Late Summer",
+        color: "yellow",
+        desc: "Tall stately Maryland native spike flower loved by bumblebees and solitary native pollinators."
+      },
+      {
+        id: "anise-hyssop",
+        name: "Anise Hyssop",
+        latin: "Agastache foeniculum",
+        pathway: ["Pollinators", "Butterflies"],
+        sun: ["Full Sun", "Partial Shade"],
+        moisture: ["Dry", "Average"],
+        layer: "Filler",
+        bloom: "Summer",
+        color: "purple",
+        desc: "Fragrant licorice-scented leaves topped with dense purple flower spikes that magnetize honeybees and skippers."
+      },
+      {
+        id: "scarlet-bee-balm",
+        name: "Scarlet Bee Balm",
+        latin: "Monarda didyma",
+        pathway: ["Hummingbirds", "Pollinators"],
+        sun: ["Full Sun", "Partial Shade"],
+        moisture: ["Average", "Wet"],
+        layer: "Anchor",
+        bloom: "Summer",
+        color: "red",
+        desc: "Fiery red crown flowers beloved by hummingbirds and swallowtail butterflies."
+      },
+      {
+        id: "wild-bergamot",
+        name: "Wild Bergamot",
+        latin: "Monarda fistulosa",
+        pathway: ["Pollinators", "Hummingbirds"],
+        sun: ["Full Sun", "Partial Shade"],
+        moisture: ["Dry", "Average"],
+        layer: "Filler",
+        bloom: "Summer",
+        color: "purple",
+        desc: "Soft lavender-pink fireworks blooms with aromatic foliage that resists deer and rabbits."
+      },
+      {
+        id: "great-blue-lobelia",
+        name: "Great Blue Lobelia",
+        latin: "Lobelia siphilitica",
+        pathway: ["Pollinators", "Hummingbirds"],
+        sun: ["Full Sun", "Partial Shade"],
+        moisture: ["Average", "Wet"],
+        layer: "Filler",
+        bloom: "Late Summer",
+        color: "blue",
+        desc: "Deep blue spires blooming alongside Cardinal Flower for breathtaking late summer color contrast."
+      },
+      {
+        id: "blue-mistflower",
+        name: "Blue Mistflower",
+        latin: "Conoclinium coelestinum",
+        pathway: ["Butterflies", "Pollinators"],
+        sun: ["Full Sun", "Partial Shade"],
+        moisture: ["Average", "Wet"],
+        layer: "Groundcover",
+        bloom: "Fall",
+        color: "blue",
+        desc: "Fuzzy powder-blue late season blooms that provide crucial fuel for migrating Monarchs."
+      },
+      {
+        id: "joe-pye-weed",
+        name: "Joe Pye Weed",
+        latin: "Eutrochium fistulosum",
+        pathway: ["Butterflies", "Pollinators"],
+        sun: ["Full Sun", "Partial Shade"],
+        moisture: ["Average", "Wet"],
+        layer: "Anchor",
+        bloom: "Late Summer",
+        color: "pink",
+        desc: "Towering 6-8ft architectural garden anchor topped with massive vanilla-scented mauve flower heads."
+      },
+      {
+        id: "showy-goldenrod",
+        name: "Showy Goldenrod",
+        latin: "Solidago speciosa",
+        pathway: ["Pollinators", "Butterflies"],
+        sun: ["Full Sun"],
+        moisture: ["Dry", "Average"],
+        layer: "Filler",
+        bloom: "Fall",
+        color: "yellow",
+        desc: "Feathered golden wands in autumn. Essential late-season pollen source (does NOT cause hay fever!)."
+      },
+      {
+        id: "broadleaf-goldenrod",
+        name: "Broadleaf Goldenrod",
+        latin: "Solidago flexicaulis",
+        pathway: ["Pollinators"],
+        sun: ["Partial Shade", "Full Shade"],
+        moisture: ["Average"],
+        layer: "Filler",
+        bloom: "Fall",
+        color: "yellow",
+        desc: "Shade-tolerant goldenrod with zig-zag stems and bright yellow flower clusters."
+      },
+      {
+        id: "coral-honeysuckle",
+        name: "Coral Honeysuckle",
+        latin: "Lonicera sempervirens",
+        pathway: ["Hummingbirds", "Butterflies"],
+        sun: ["Full Sun", "Partial Shade"],
+        moisture: ["Average"],
+        layer: "Vine",
+        bloom: "Spring",
+        color: "red",
+        desc: "Non-invasive native vine producing trumpets of red and coral all season for hummingbirds."
+      },
+      {
+        id: "fragrant-sumac",
+        name: "Fragrant Sumac",
+        latin: "Rhus aromatica",
+        pathway: ["Pollinators"],
+        sun: ["Full Sun", "Partial Shade"],
+        moisture: ["Dry", "Average"],
+        layer: "Shrub",
+        bloom: "Spring",
+        color: "yellow",
+        desc: "Tough low-growing native shrub with fiery orange-red fall color and berries for songbirds."
+      },
+      {
+        id: "american-beautyberry",
+        name: "American Beautyberry",
+        latin: "Callicarpa americana",
+        pathway: ["Pollinators"],
+        sun: ["Full Sun", "Partial Shade"],
+        moisture: ["Average"],
+        layer: "Shrub",
+        bloom: "Summer",
+        color: "purple",
+        desc: "Produces striking metallic magenta-purple berry clusters wrapped around stems in autumn for songbirds."
+      },
+      {
+        id: "spicebush",
+        name: "Spicebush",
+        latin: "Lindera benzoin",
+        pathway: ["Butterflies"],
+        sun: ["Partial Shade", "Full Shade"],
+        moisture: ["Average", "Wet"],
+        layer: "Shrub",
+        bloom: "Spring",
+        color: "yellow",
+        hostFor: "Spicebush Swallowtail Caterpillars",
+        desc: "Aromatic woodland shrub with early yellow blossoms. Sole host plant for Spicebush Swallowtails!"
+      },
+      {
+        id: "little-bluestem",
+        name: "Little Bluestem",
+        latin: "Schizachyrium scoparium",
+        pathway: ["Butterflies"],
+        sun: ["Full Sun"],
+        moisture: ["Dry", "Average"],
+        layer: "Grass",
+        bloom: "Fall",
+        color: "copper",
+        desc: "Native bunchgrass providing striking coppery-orange fall color and winter bird shelter."
+      },
+      {
+        id: "big-bluestem",
+        name: "Big Bluestem",
+        latin: "Andropogon gerardii",
+        pathway: ["Butterflies"],
+        sun: ["Full Sun"],
+        moisture: ["Dry", "Average"],
+        layer: "Grass",
+        bloom: "Late Summer",
+        color: "copper",
+        desc: "Classic prairie architectural grass with distinctive 'turkey foot' seed heads and deep soil roots."
+      },
+      {
+        id: "purple-coneflower",
+        name: "Purple Coneflower",
+        latin: "Echinacea purpurea",
+        pathway: ["Pollinators", "Butterflies"],
+        sun: ["Full Sun", "Partial Shade"],
+        moisture: ["Dry", "Average"],
+        layer: "Filler",
+        bloom: "Summer",
+        color: "purple",
+        desc: "Classic native centerpiece with prominent seed cones that feed Goldfinches in late autumn."
+      },
+      {
+        id: "golden-alexander",
+        name: "Golden Alexander",
+        latin: "Zizia aurea",
+        pathway: ["Butterflies", "Pollinators"],
+        sun: ["Full Sun", "Partial Shade"],
+        moisture: ["Average", "Wet"],
+        layer: "Filler",
+        bloom: "Spring",
+        color: "yellow",
+        hostFor: "Black Swallowtail Caterpillars",
+        desc: "Bright yellow spring umbels that serve as a critical host plant for Black Swallowtail caterpillars."
+      },
+      {
+        id: "wild-geranium",
+        name: "Wild Geranium",
+        latin: "Geranium maculatum",
+        pathway: ["Pollinators"],
+        sun: ["Partial Shade", "Full Shade"],
+        moisture: ["Average"],
+        layer: "Groundcover",
+        bloom: "Spring",
+        color: "pink",
+        desc: "Soft pink spring blossoms providing crucial early nectar for native queen bumblebees."
+      },
+      {
+        id: "pennsylvania-sedge",
+        name: "Pennsylvania Sedge",
+        latin: "Carex pensylvanica",
+        pathway: ["Pollinators"],
+        sun: ["Partial Shade", "Full Shade"],
+        moisture: ["Dry", "Average"],
+        layer: "Groundcover",
+        bloom: "Spring",
+        color: "green",
+        desc: "Feathery lawn alternative grass for dry shady areas under mature oak trees."
+      },
+      {
+        id: "aromatic-aster",
+        name: "Aromatic Aster",
+        latin: "Symphyotrichum oblongifolium",
+        pathway: ["Butterflies", "Pollinators"],
+        sun: ["Full Sun"],
+        moisture: ["Dry", "Average"],
+        layer: "Groundcover",
+        bloom: "Fall",
+        color: "purple",
+        desc: "Masses of lavender-purple blossoms through October. Fragrant leaves deter garden pests."
+      },
+      {
+        id: "black-eyed-susan",
+        name: "Black-Eyed Susan",
+        latin: "Rudbeckia fulgida",
+        pathway: ["Pollinators"],
+        sun: ["Full Sun", "Partial Shade"],
+        moisture: ["Average"],
+        layer: "Filler",
+        bloom: "Summer",
+        color: "yellow",
+        desc: "Maryland's iconic state flower! Golden yellow petals with dark brown central buttons."
+      },
+      {
+        id: "white-turtlehead",
+        name: "White Turtlehead",
+        latin: "Chelone glabra",
+        pathway: ["Butterflies"],
+        sun: ["Full Sun", "Partial Shade"],
+        moisture: ["Average", "Wet"],
+        layer: "Anchor",
+        bloom: "Late Summer",
+        color: "white",
+        hostFor: "Baltimore Checkerspot Butterfly (MD State Butterfly)",
+        desc: "Unique snapdragon-like white blooms. The PRIMARY host plant for Maryland's official state butterfly!"
+      },
+      {
+        id: "eastern-red-columbine",
+        name: "Eastern Red Columbine",
+        latin: "Aquilegia canadensis",
+        pathway: ["Hummingbirds"],
+        sun: ["Full Sun", "Partial Shade", "Full Shade"],
+        moisture: ["Dry", "Average"],
+        layer: "Filler",
+        bloom: "Spring",
+        color: "red",
+        desc: "Early April red and yellow bell blooms timed precisely for arriving spring hummingbirds."
+      },
+      {
+        id: "blazing-star",
+        name: "Blazing Star",
+        latin: "Liatris spicata",
+        pathway: ["Butterflies", "Pollinators"],
+        sun: ["Full Sun"],
+        moisture: ["Average", "Wet"],
+        layer: "Anchor",
+        bloom: "Summer",
+        color: "purple",
+        desc: "Vibrant purple feathery spikes blooming top to bottom, magnetizing butterflies and bumblebees."
+      },
+      {
+        id: "new-york-ironweed",
+        name: "New York Ironweed",
+        latin: "Vernonia novaboracensis",
+        pathway: ["Butterflies", "Pollinators"],
+        sun: ["Full Sun", "Partial Shade"],
+        moisture: ["Average", "Wet"],
+        layer: "Anchor",
+        bloom: "Fall",
+        color: "purple",
+        desc: "Deep intense purple autumn blooms creating stunning visual contrast alongside yellow Goldenrods."
+      }
+    ];
+
+    let yardPlan = JSON.parse(localStorage.getItem('betterfly_yard_plan') || '[]');
+    let activeTab = 'why-natives';
+    let selectedSeason = 'All';
+
+    // Accurate Web Counter with Single-Session Protection (Change 1)
+    async function initVisitorCounter() {
+      const counterEl = document.getElementById('visitor-counter-val');
+      const BASE_OFFSET = 1248;
+      const sessionCounted = sessionStorage.getItem('betterfly_counted');
+
+      try {
+        // If already counted in this browser session, just fetch the total; otherwise increment
+        const endpoint = sessionCounted 
+          ? 'https://api.counterapi.dev/v1/betterfly_garden_planner_visits/visits' 
+          : 'https://api.counterapi.dev/v1/betterfly_garden_planner_visits/visits/up';
+
+        const response = await fetch(endpoint);
+        if (response.ok) {
+          const data = await response.json();
+          if (data && typeof data.count === 'number') {
+            sessionStorage.setItem('betterfly_counted', 'true');
+            const totalVisits = data.count + BASE_OFFSET;
+            counterEl.textContent = totalVisits.toLocaleString();
+            return;
+          }
+        }
+      } catch (err) {
+        console.log("Global API counter fallback:", err);
+      }
+
+      // Local storage fallback if API is unreachable
+      let visits = parseInt(localStorage.getItem('betterfly_visits') || '0');
+      if (!sessionCounted) {
+        visits += 1;
+        localStorage.setItem('betterfly_visits', visits.toString());
+        sessionStorage.setItem('betterfly_counted', 'true');
+      }
+      counterEl.textContent = (visits + BASE_OFFSET).toLocaleString();
+    }
+
+    function switchTab(tabId) {
+      activeTab = tabId;
+      
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.nav-tab').forEach(el => {
+        el.classList.remove('bg-sky-600', 'text-white', 'shadow-sm');
+        el.classList.add('text-slate-600', 'hover:bg-sky-100');
+      });
+
+      const targetContent = document.getElementById(`tab-${tabId}`);
+      if (targetContent) targetContent.classList.remove('hidden');
+
+      const targetNav = document.getElementById(`nav-${tabId}`);
+      if (targetNav) {
+        targetNav.classList.remove('text-slate-600', 'hover:bg-sky-100');
+        targetNav.classList.add('bg-sky-600', 'text-white', 'shadow-sm');
+      }
+
+      if (tabId === 'explorer') {
+        renderPlants();
+      }
+    }
+
+    function setSeasonFilter(season) {
+      selectedSeason = season;
+      
+      document.querySelectorAll('.season-btn').forEach(btn => {
+        btn.classList.remove('bg-slate-800', 'text-white');
+        btn.classList.add('bg-slate-50', 'text-slate-700');
+      });
+
+      const activeBtn = document.getElementById(`season-btn-${season}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-slate-50', 'text-slate-700');
+        activeBtn.classList.add('bg-slate-800', 'text-white');
+      }
+
+      renderPlants();
+    }
+
+    function renderPlants() {
+      const grid = document.getElementById('plant-grid');
+      if (!grid) return;
+
+      const searchVal = document.getElementById('search-input').value.toLowerCase().trim();
+      const pathwayVal = document.getElementById('filter-pathway').value;
+      const sunVal = document.getElementById('filter-sun').value;
+      const moistureVal = document.getElementById('filter-moisture').value;
+      const layerVal = document.getElementById('filter-layer').value;
+
+      const filtered = NATIVE_PLANTS.filter(p => {
+        const matchesSearch = p.name.toLowerCase().includes(searchVal) || 
+                              p.latin.toLowerCase().includes(searchVal) ||
+                              (p.hostFor && p.hostFor.toLowerCase().includes(searchVal));
+        
+        const matchesPathway = pathwayVal === 'All' || p.pathway.includes(pathwayVal);
+        const matchesSun = sunVal === 'All' || p.sun.includes(sunVal);
+        const matchesMoisture = moistureVal === 'All' || p.moisture.includes(moistureVal);
+        const matchesSeason = selectedSeason === 'All' || p.bloom === selectedSeason;
+        
+        let matchesLayer = true;
+        if (layerVal === 'Shrubs & Vines') {
+          matchesLayer = p.layer === 'Shrub' || p.layer === 'Vine';
+        } else if (layerVal !== 'All') {
+          matchesLayer = p.layer === layerVal;
+        }
+
+        return matchesSearch && matchesPathway && matchesSun && matchesMoisture && matchesLayer && matchesSeason;
+      });
+
+      document.getElementById('filtered-count-badge').textContent = `${filtered.length} Species`;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full bg-white border border-sky-200 rounded-3xl p-8 text-center space-y-3">
+            <span class="text-4xl">🔍</span>
+            <h4 class="font-bold text-slate-800">No matching species found</h4>
+            <p class="text-slate-500 text-xs max-w-sm mx-auto">Try broadening your filter criteria or search query to explore more native species!</p>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => {
+        const inPlan = yardPlan.includes(p.name);
+        return `
+          <div class="bg-white border border-slate-200 rounded-3xl p-5 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-start justify-between gap-2">
+                <div>
+                  <h3 class="font-bold text-slate-900 text-lg leading-tight">${p.name}</h3>
+                  <p class="text-xs italic text-slate-500">${p.latin}</p>
+                </div>
+                <span class="bg-sky-100 text-sky-800 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full whitespace-nowrap">
+                  ${p.layer}
+                </span>
+              </div>
+
+              ${p.hostFor ? `
+                <div class="bg-amber-50 border border-amber-200 rounded-xl px-3 py-1.5 text-[11px] font-bold text-amber-900 flex items-center gap-1.5">
+                  <span>🐛</span>
+                  <span>Host: ${p.hostFor}</span>
+                </div>
+              ` : ''}
+
+              <p class="text-xs text-slate-600 leading-relaxed">${p.desc}</p>
+
+              <div class="flex flex-wrap gap-1.5 pt-1 text-[10px] font-semibold">
+                <span class="bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md">☀️ ${p.sun.join(', ')}</span>
+                <span class="bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md">💧 ${p.moisture.join(', ')}</span>
+                <span class="bg-emerald-50 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded-md">🌸 Bloom: ${p.bloom}</span>
+              </div>
+            </div>
+
+            <button onclick="addToPlan('${p.name}')" class="mt-4 w-full py-2.5 px-4 rounded-2xl font-bold text-xs transition-all flex items-center justify-center gap-2 ${
+              inPlan 
+                ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' 
+                : 'bg-sky-50 hover:bg-sky-100 text-sky-800 border border-sky-200'
+            }">
+              <span>${inPlan ? '✓ In Yard Plan' : '➕ Add to Yard Plan'}</span>
+            </button>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function addToPlan(plantName) {
+      if (!yardPlan.includes(plantName)) {
+        yardPlan.push(plantName);
+      } else {
+        yardPlan = yardPlan.filter(item => item !== plantName);
+      }
+      localStorage.setItem('betterfly_yard_plan', JSON.stringify(yardPlan));
+      updatePlanUI();
+      if (activeTab === 'explorer') renderPlants();
+    }
+
+    function updatePlanUI() {
+      document.getElementById('plan-badge-count').textContent = yardPlan.length;
+      
+      const drawerContent = document.getElementById('plan-drawer-content');
+      if (!drawerContent) return;
+
+      if (yardPlan.length === 0) {
+        drawerContent.innerHTML = `
+          <div class="text-center py-12 space-y-3">
+            <span class="text-4xl">🌱</span>
+            <p class="text-slate-500 font-medium text-sm">Your Yard Plan is empty!</p>
+            <p class="text-slate-400 text-xs max-w-xs mx-auto">Browse the Pathways Explorer tab or Quick Start guide to add native species to your customized shopping list.</p>
+          </div>
+        `;
+        return;
+      }
+
+      drawerContent.innerHTML = `
+        <div class="space-y-3">
+          <div class="bg-sky-50 border border-sky-200 p-3 rounded-2xl text-xs text-sky-900 font-medium">
+            💡 Estimated Coverage: <strong>${yardPlan.length * 16} sq. ft.</strong> (Approx 16 sq. ft per plant grouping)
+          </div>
+          <div class="divide-y divide-slate-100 border border-slate-200 rounded-2xl overflow-hidden bg-white">
+            ${yardPlan.map(name => `
+              <div class="p-3.5 flex items-center justify-between text-xs">
+                <span class="font-bold text-slate-800">${name}</span>
+                <button onclick="addToPlan('${name}')" class="text-rose-500 hover:text-rose-700 font-bold px-2 py-1 no-print">Remove</button>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    function toggleYardPlanDrawer() {
+      const drawer = document.getElementById('plan-drawer');
+      const overlay = document.getElementById('plan-drawer-overlay');
+      drawer.classList.toggle('translate-x-full');
+      overlay.classList.toggle('hidden');
+    }
+
+    function clearYardPlan() {
+      yardPlan = [];
+      localStorage.setItem('betterfly_yard_plan', JSON.stringify(yardPlan));
+      updatePlanUI();
+      if (activeTab === 'explorer') renderPlants();
+    }
+
+    function copyYardPlanList() {
+      if (yardPlan.length === 0) return;
+      const text = "My Maryland Native Garden Plan:\n" + yardPlan.map(p => `- ${p}`).join("\n");
+      
+      const tempInput = document.createElement('textarea');
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+
+      const btn = document.getElementById('copy-plan-btn');
+      const origText = btn.innerHTML;
+      btn.innerHTML = "<span>✓</span> Copied to Clipboard!";
+      setTimeout(() => btn.innerHTML = origText, 2000);
+    }
+
+    function revealEmail() {
+      const parts = ["david", "mikosz", "gmail", "com"];
+      const addr = `${parts[0]}.${parts[1]}@${parts[2]}.${parts[3]}`;
+      
+      const card = document.getElementById('email-display-card');
+      const link = document.getElementById('email-mailto-link');
+      const btn = document.getElementById('reveal-email-btn');
+
+      link.href = `mailto:${addr}`;
+      link.textContent = addr;
+      card.classList.remove('hidden');
+      btn.classList.add('hidden');
+    }
+
+    function copyEmailToClipboard() {
+      const link = document.getElementById('email-mailto-link');
+      if (!link.textContent) return;
+
+      const tempInput = document.createElement('textarea');
+      tempInput.value = link.textContent;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+
+      const copyBtn = document.getElementById('copy-email-btn');
+      copyBtn.textContent = "✓ Copied!";
+      setTimeout(() => copyBtn.textContent = "Copy", 2000);
+    }
+
+    window.onload = function() {
+      initVisitorCounter();
+      updatePlanUI();
+      renderPlants();
+    };
+  </script>
+</body>
+</html>
