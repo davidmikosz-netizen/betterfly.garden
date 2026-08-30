@@ -83,6 +83,19 @@
 </head>
 <body class="bg-gradient-to-br from-sky-100 via-sky-50 to-blue-100 min-h-screen text-slate-800 antialiased pb-16">
 
+  <!-- Anthology Corridor III Quick Navigation Bar -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-2">
+      <a href="https://fallow.garden" class="font-bold text-white hover:text-sky-400 transition-colors flex items-center gap-1.5">
+        <span>🌿</span> <span>fallow.garden Anthology</span>
+      </a>
+      <div class="flex items-center gap-3 text-[11px] text-slate-400 flex-wrap">
+        <span class="text-slate-500 hidden sm:inline">Corridor III (Landscape Ecology):</span>
+        <span class="text-white font-semibold">betterfly.garden (Maryland Native Planner)</span>
+      </div>
+    </div>
+  </div>
+
   <!-- HEADER CONTAINER -->
   <header class="max-w-7xl mx-auto px-4 pt-6 pb-4">
     <div class="bg-white/95 border border-sky-200 rounded-3xl p-6 md:p-8 shadow-md">
@@ -141,8 +154,8 @@
           </div>
         </div>
 
-        <!-- Visitor Counter & My Yard Plan Button -->
-        <div class="flex flex-wrap items-center justify-center gap-3 w-full md:w-auto">
+        <!-- Visitor Counter -->
+        <div class="flex items-center justify-center gap-3">
           <div class="bg-sky-50 border border-sky-200 px-3 py-2 rounded-2xl flex items-center gap-2 text-xs font-semibold text-sky-900">
             <span class="text-base">👁️</span>
             <div>
@@ -150,19 +163,13 @@
               <span id="visitor-counter-val">1,248</span>
             </div>
           </div>
-
-          <button id="open-plan-btn" onclick="toggleYardPlanDrawer()" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold text-sm px-5 py-3 rounded-2xl shadow-sm hover:shadow transition-all flex items-center gap-2">
-            <span>📋</span>
-            <span>My Yard Plan</span>
-            <span id="plan-badge-count" class="bg-white text-amber-900 font-black text-xs px-2 py-0.5 rounded-full">0</span>
-          </button>
         </div>
 
       </div>
     </div>
   </header>
 
-  <!-- MAIN NAVIGATION TABS (Reordered: MD Native Nurseries moved to end) -->
+  <!-- MAIN NAVIGATION TABS -->
   <nav class="max-w-7xl mx-auto px-4 mb-6">
     <div class="flex overflow-x-auto gap-2 bg-white/80 p-2 rounded-2xl border border-sky-200 shadow-sm scrollbar-none">
       <button onclick="switchTab('why-natives')" id="nav-why-natives" class="nav-tab px-4 py-2.5 rounded-xl font-bold text-sm whitespace-nowrap transition-all bg-sky-600 text-white shadow-sm flex items-center gap-2">
@@ -356,17 +363,28 @@
       </div>
     </section>
 
-    <!-- TAB 3: PATHWAYS EXPLORER & BLOOM CALENDAR -->
+    <!-- TAB 3: PATHWAYS EXPLORER & BLOOM CALENDAR (With "My Yard Plan" button moved here) -->
     <section id="tab-explorer" class="tab-content hidden space-y-6">
       
-      <!-- New Introductory Banner (Change 4) -->
-      <div class="bg-gradient-to-r from-sky-50 via-emerald-50 to-blue-50 border border-sky-200 p-6 rounded-3xl shadow-sm space-y-2">
-        <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 flex items-center gap-2">
-          <span>🌿</span> Pathways Explorer &amp; Bloom Succession
-        </h2>
-        <p class="text-slate-700 text-xs sm:text-sm font-medium leading-relaxed max-w-4xl">
-          The selections below allow you to optimize your garden for pollinators, hummingbirds, butterflies, or all of the above. Use the bloom succession matrix to ensure continuous flowering from early spring through late fall, providing uninterrupted nectar and pollen corridors across the entire growing season.
-        </p>
+      <!-- New Introductory Banner -->
+      <div class="bg-gradient-to-r from-sky-50 via-emerald-50 to-blue-50 border border-sky-200 p-6 rounded-3xl shadow-sm space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 flex items-center gap-2">
+              <span>🌿</span> Pathways Explorer &amp; Bloom Succession
+            </h2>
+            <p class="text-slate-700 text-xs sm:text-sm font-medium leading-relaxed max-w-3xl mt-1">
+              Optimize your garden for pollinators, hummingbirds, butterflies, or all of the above. Use the bloom succession matrix to ensure continuous flowering from early spring through late fall.
+            </p>
+          </div>
+          
+          <!-- Moved "My Yard Plan" Button -->
+          <button id="open-plan-btn" onclick="toggleYardPlanDrawer()" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold text-sm px-5 py-3 rounded-2xl shadow-sm hover:shadow transition-all flex items-center gap-2 shrink-0">
+            <span>📋</span>
+            <span>My Yard Plan</span>
+            <span id="plan-badge-count" class="bg-white text-amber-900 font-black text-xs px-2 py-0.5 rounded-full">0</span>
+          </button>
+        </div>
       </div>
 
       <div class="bg-white border border-sky-200 p-5 rounded-3xl shadow-sm space-y-3">
@@ -469,7 +487,7 @@
             <span>🦌</span> Deer &amp; Bunny Defense Guide
           </h2>
           <p class="text-slate-600 text-sm mt-1">
-            Protecting your native garden does not require turning your yard into a fortress! Understanding animal habits helps keep your plants safe.
+            Protecting your native garden does not required turning your yard into a fortress! Understanding animal habits helps keep your plants safe.
           </p>
         </div>
 
@@ -567,7 +585,7 @@
       </div>
     </section>
 
-    <!-- TAB 6: ABOUT & SUPPORT -->
+    <!-- TAB 6: ABOUT & SUPPORT (Updated with Buy Me a Coffee) -->
     <section id="tab-about" class="tab-content hidden space-y-6">
       <div class="bg-white border border-sky-200 p-6 md:p-8 rounded-3xl space-y-6 shadow-sm">
         
@@ -576,7 +594,7 @@
             <span>ℹ️</span> About Better Fly Maryland
           </h2>
           <p class="text-slate-600 text-sm mt-1">
-            This app was developed by David Mikosz as he moves to make his lawn more friendly to native pollinators, butterflies and hummingbirds.
+            This app was developed by David Mikosz as he moves to make his lawn more friendly to native pollinators, butterflies and hummingbirds. Part of the <a href="https://fallow.garden" class="text-sky-600 font-bold hover:underline">fallow.garden</a> anthology.
           </p>
         </div>
 
@@ -599,14 +617,14 @@
               <span class="text-3xl">☕</span>
               <div>
                 <h3 class="font-bold text-slate-900 text-lg">Support Native Habitat Projects</h3>
-                <p class="text-slate-600 text-xs">If this tool helped you design your garden, consider sending a small tip to support future updates!</p>
+                <p class="text-slate-600 text-xs">If this tool helped you design your garden, consider buying a coffee to support future updates!</p>
               </div>
             </div>
 
             <div class="pt-2">
-              <a href="https://venmo.com/u/forgoodkarma" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#008CFF] hover:bg-[#0074d9] text-white font-bold text-sm px-6 py-3 rounded-2xl shadow-sm transition-all w-full">
-                <span>💙</span>
-                <span>Tip via Venmo (@forgoodkarma)</span>
+              <a href="https://buymeacoffee.com/davidmikosz" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#FFDD00] hover:bg-[#f2d100] text-slate-900 font-bold text-sm px-6 py-3 rounded-2xl shadow-sm transition-all w-full">
+                <span>☕</span>
+                <span>Buy Me a Coffee</span>
               </a>
             </div>
           </div>
@@ -638,7 +656,7 @@
       </div>
     </section>
 
-    <!-- TAB 7: MARYLAND NATIVE NURSERIES FINDER (Moved to end of bar) -->
+    <!-- TAB 7: MARYLAND NATIVE NURSERIES FINDER -->
     <section id="tab-nurseries" class="tab-content hidden space-y-6">
       <div class="bg-white border border-sky-200 p-6 md:p-8 rounded-3xl space-y-6 shadow-sm">
         <div class="border-b border-sky-100 pb-4">
@@ -728,7 +746,6 @@
         <div>
           <h3 class="font-bold text-slate-900 text-lg leading-tight">My Yard Plan</h3>
           <p class="text-sky-900 text-xs font-semibold mt-0.5">Custom Native Plant Shopping List</p>
-          <!-- Explanatory Text Added (Change 5) -->
           <p class="text-slate-600 text-xs mt-1 leading-relaxed">
             This allows you to develop, save, and print a custom shopping list of the native plants you chose for your garden.
           </p>
@@ -1164,14 +1181,12 @@
     let activeTab = 'why-natives';
     let selectedSeason = 'All';
 
-    // Accurate Web Counter with Single-Session Protection (Change 1)
     async function initVisitorCounter() {
       const counterEl = document.getElementById('visitor-counter-val');
       const BASE_OFFSET = 1248;
       const sessionCounted = sessionStorage.getItem('betterfly_counted');
 
       try {
-        // If already counted in this browser session, just fetch the total; otherwise increment
         const endpoint = sessionCounted 
           ? 'https://api.counterapi.dev/v1/betterfly_garden_planner_visits/visits' 
           : 'https://api.counterapi.dev/v1/betterfly_garden_planner_visits/visits/up';
@@ -1190,7 +1205,6 @@
         console.log("Global API counter fallback:", err);
       }
 
-      // Local storage fallback if API is unreachable
       let visits = parseInt(localStorage.getItem('betterfly_visits') || '0');
       if (!sessionCounted) {
         visits += 1;
@@ -1252,8 +1266,8 @@
 
       const filtered = NATIVE_PLANTS.filter(p => {
         const matchesSearch = p.name.toLowerCase().includes(searchVal) || 
-                              p.latin.toLowerCase().includes(searchVal) ||
-                              (p.hostFor && p.hostFor.toLowerCase().includes(searchVal));
+                            p.latin.toLowerCase().includes(searchVal) ||
+                            (p.hostFor && p.hostFor.toLowerCase().includes(searchVal));
         
         const matchesPathway = pathwayVal === 'All' || p.pathway.includes(pathwayVal);
         const matchesSun = sunVal === 'All' || p.sun.includes(sunVal);
